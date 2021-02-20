@@ -1,9 +1,11 @@
 # beyond_sokoban
 beyond_sokoban is a sokoban replica made with C and ncruses
 
-Once you have cloned the repo and downloaded the ncurses library, execute the "play_script" script by typing in a terminal "./play_scipt".
+Once you have cloned the repo and downloaded the ncurses library, execute the "play_script" script by typing in a terminal "./play_script".
 
 If you want to play with a custom map you have an example file named "exmaple_map" which shows how a map is done.
+
+# custom map conception
 
 For custom maps:
     '#': walls player and boxes cannot go through
