@@ -1,0 +1,1 @@
+make; clear; ./beyond_sokoban $1
