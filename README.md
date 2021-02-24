@@ -1,5 +1,5 @@
-# beyond_sokoban
-beyond_sokoban is a sokoban replica made with C and ncurses
+# beyond_boxes
+beyond_boxes is a sokoban replica made with C and ncurses
 
 Once you have cloned the repo and downloaded the ncurses library, execute the "play_script" script by typing in a terminal "./play_script".
 
