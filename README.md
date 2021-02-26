@@ -23,12 +23,14 @@ Exexute example: "./play_script example_map"
 
 To play online mode:
     You first need to stop your firewall from blocking client connection
+
     Fedora users:
-        systemctl stop firewalld
-        systemctl start firewalld
-    Then make sure that all the players are connected to the same network
-    All the players must have the file map
-    All the players must know the host's IPv4
+        1. systemctl stop firewalld
+        2. systemctl start firewalld
+
+    Then make sure that all the players are connected to the same network.
+    All the players must have the file map.
+    All the players must know the host's IPv4.
 
     Steps:
         1. The host launch the play_script with the custom map as argument
