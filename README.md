@@ -1,5 +1,6 @@
-# beyond_sokoban
-beyond_sokoban is a sokoban replica made with C and ncurses
+# beyond_boxes
+
+beyond_boxes is a sokoban replica made with C and ncurses
 
 Once you have cloned the repo and downloaded the ncurses library, execute the "play_script" script by typing in a terminal "./play_script".
 
@@ -17,7 +18,6 @@ Every line of your map must end with a breakline, don't forget it !
 
 Once your custom map is complete, execute "./play_script {path_to_map}" in order to be able to play with your custom map.
 Exexute example: "./play_script example_map"
-
 
 # online mode
 
