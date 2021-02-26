@@ -13,12 +13,18 @@
 #include <sys/types.h>
 #include <fcntl.h>
 #include <ncurses.h>
+#include <curses.h>
 #include <time.h>
 #include <signal.h>
 #include <sys/ioctl.h>
 #include <SFML/Window.h>
 #include <SFML/Graphics.h>
 #include <SFML/System.h>
+#include <pthread.h>
+#include <arpa/inet.h>
+#include <netdb.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
 
 #define scp my_strcpy
 #define gnb my_getnbr
@@ -37,6 +43,9 @@ typedef struct highcore_s {
 typedef enum game_state_s {
     menu,
     level_select,
+    map_editor,
+    set_player_nb,
+    arg_map_opt,
     game_on,
     level_failed,
     level_completed,
@@ -65,6 +74,10 @@ typedef struct global_s {
     float seconds;
     sfClock *clock_h;
     int moves;
+    int xmap;
+    int ymap;
+    int player_nb;
+    char *ip;
     game_state_t game_state;
     highscore_t *highscore;
 } global_t;
@@ -131,5 +144,19 @@ int display_level_select(global_t *global);
 global_t *display_timer(global_t *global);
 char *ss_to_str(char **tab);
 char *int_to_str(int nb);
+int display_map_editor(global_t *global);
+void display_map_editor_misc(global_t *global, char **tab, int yc, int xc);
+char **retrieve_file_content(char *map);
+int update_ym(int *yc, global_t *global, int c);
+int update_xm(int *yc, global_t *global, int c);
+void display_map_editor_misc(global_t *global, char **tab, int yc, int xc);
+char **retrieve_file_content(char *map);
+int display_map_arg_opt(global_t *global);
+int game_loop_online(global_t *global);
+int display_space_pause(global_t *global);
+int game_loop_online(global_t *global);
+int init_game_loop_on(global_t *global);
+global_t *reset_map_on(global_t *global);
+int display_space_pause(global_t *global);
 
 #endif /* !MY_H_ */

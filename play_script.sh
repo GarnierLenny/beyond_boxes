@@ -1,1 +1,1 @@
-make; clear; ./beyond_sokoban $1
+make; clear; ./beyond_boxes $1

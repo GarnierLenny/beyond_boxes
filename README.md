@@ -18,6 +18,27 @@ Every line of your map must end with a breakline, don't forget it !
 Once your custom map is complete, execute "./play_script {path_to_map}" in order to be able to play with your custom map.
 Exexute example: "./play_script example_map"
 
+
+# online mode
+
+To play online mode:
+    You first need to stop your firewall from blocking client connection
+    Fedora users:
+        systemctl stop firewalld
+        systemctl start firewalld
+    Then make sure that all the players are connected to the same network
+    All the players must have the file map
+    All the players must know the host's IPv4
+
+    Steps:
+        1. The host launch the play_script with the custom map as argument
+        2. The host must go to "PLAY ARGUMENT MAP > HOST" then type his IPv4
+        3. The host must finally select the total players slot with 'z' and 's' then press ENTER
+        4. All the clients now must launch the play_script with the custom map as argument
+        5. All the clients must go to "PLAY ARGUMENT MAP > JOIN" then type host's IPv4
+        6. If "Press space to launch" is displayed on everyones screens congratulations you did it !
+        7. When someone presses SPACE his game will start and so his timer
+
 This project isn't finished yet, i'll keep you up to date.
 
 Thanks for playing ! Don't hesitate to rate or give me feedback.

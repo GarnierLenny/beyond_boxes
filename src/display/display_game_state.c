@@ -23,6 +23,10 @@ int display_game_state(global_t *global)
             display_level_failed(global);
         else if (global->game_state == level_select)
             display_level_select(global);
+        else if (global->game_state == map_editor)
+            display_map_editor(global);
+        else if (global->game_state == arg_map_opt)
+            display_map_arg_opt(global);
     }
     return 0;
 }

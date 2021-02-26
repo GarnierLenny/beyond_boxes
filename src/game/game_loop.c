@@ -7,6 +7,15 @@
 
 #include "my.h"
 
+int end_all(global_t *global, int x)
+{
+    free(global);
+    clear();
+    endwin();
+    exit(x);
+    return 0;
+}
+
 global_t *game_loop(global_t *global)
 {
     struct winsize w;

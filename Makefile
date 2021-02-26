@@ -16,9 +16,13 @@ SRC		=	src/utility/usage.c\
 			src/display/display_level_completed.c\
 			src/display/display_level_completed_misc.c\
 			src/display/disp_all.c\
+			src/display/display_map_editor_misc.c\
 			src/display/display_level_failed.c\
+			src/display/display_map_arg_opt.c\
 			src/display/display_level_select.c\
+			src/display/display_map_editor.c\
 			src/game/game_loop.c\
+			src/game/game_loop_online.c\
 			src/move_player/move_player.c\
 			src/move_player/move_player_x.c\
 			src/move_player/move_player_y.c\
@@ -52,11 +56,11 @@ OBJ_UT	=	$(SRC_UT:.c=.o)
 
 INCLUDE	=	-I./include
 
-NAME	=	beyond_sokoban
+NAME	=	beyond_boxes
 
 NAME_UT	=	unit_tests
 
-CFLAGS	=	-W -Werror -Wall -Wextra -I./include -lncurses -lcsfml-graphics -lcsfml-window -lcsfml-system
+CFLAGS	=	-W -Werror -Wall -Wextra -I./include -lncurses -lcsfml-graphics -lcsfml-window -lcsfml-system -pthread
 
 CFLAGS_UT	=	-lcriterion --coverage -lgcov
 
